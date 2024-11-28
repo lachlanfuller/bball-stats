@@ -1,0 +1,59 @@
+.player-tile {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 120px;
+  text-align: center;
+  font-size: 0.9rem;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.player-tile:hover {
+  background-color: #eef;
+  transform: translateY(-3px);
+}
+
+.player-tile.active {
+  background-color: #cce5ff;
+  border-color: #007bff;
+}
+
+.player-info {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.status {
+  font-size: 0.8rem;
+  color: gray;
+  display: block;
+  margin-top: 5px;
+}
+
+.player-icon {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .player-tile {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .player-tile {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+
+  .player-icon {
+    font-size: 1.2rem;
+  }
+}

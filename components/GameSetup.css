@@ -1,0 +1,98 @@
+.game-setup {
+  padding: 20px;
+}
+
+.add-player {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.add-player input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.player-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.player-tile {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: 120px;
+  text-align: center;
+  font-size: 0.9rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.player-tile:hover {
+  background-color: #eef;
+}
+
+.player-tile.starter {
+  border-color: green;
+}
+
+.player-tile.bench {
+  border-color: red;
+}
+
+.player-actions {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: flex;
+  gap: 5px;
+}
+
+.player-actions svg {
+  cursor: pointer;
+}
+
+.status {
+  font-size: 0.8rem;
+  color: gray;
+  display: block;
+  margin-top: 5px;
+}
+
+.game-settings {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.game-settings label {
+  margin-right: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .player-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .player-tile {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-player {
+    flex-direction: column;
+  }
+
+  .player-grid {
+    gap: 10px;
+  }
+}
