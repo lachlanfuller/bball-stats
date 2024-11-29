@@ -1,42 +1,44 @@
-.stats-log ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.stats-log {
+  width: 100%;
+  margin-top: 20px;
 }
 
-.stats-log li {
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.period-header {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 5px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
+  gap: 10px;
 }
 
-.stats-log .log-text {
+.period-toggle-icon {
+  font-size: 1rem;
+}
+
+.log-entry {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.log-text {
   flex: 1;
 }
 
-.stats-log .log-actions {
+.log-actions {
   display: flex;
-  gap: 15px; /* Adds space between icons */
-}
-
-.icon {
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: color 0.2s, transform 0.2s;
-}
-
-.icon:hover {
-  color: #007bff;
-  transform: scale(1.2);
-}
-
-.edit-icon {
-  color: #28a745;
-}
-
-.delete-icon {
-  color: #dc3545;
+  gap: 10px;
 }

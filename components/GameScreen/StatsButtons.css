@@ -1,11 +1,46 @@
+.stats-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.stats-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow wrapping if the screen is too narrow */
+}
+
+.stat-button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s, border 0.2s;
+}
+
+.stat-button:hover {
+  background-color: #e0e0e0;
+}
+
+.stat-button.active {
+  background-color: #28a745; /* Green background for selected */
+  color: white;
+  border: 3px solid #218838; /* Thicker green border */
+  transform: scale(1.05); /* Slightly enlarge */
+}
+
+/* Narrow Breakpoints: Stack rows vertically */
 @media (max-width: 768px) {
-  .stats-grid {
-    flex-direction: column;
-    align-items: center;
+  .stats-buttons {
+    gap: 20px; /* Larger gap between rows */
   }
 
-  .stat-button {
-    width: 80%;
-    margin-bottom: 10px;
+  .stats-row {
+    flex-direction: column;
+    align-items: center; /* Center align buttons */
   }
 }

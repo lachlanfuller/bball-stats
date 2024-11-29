@@ -1,25 +1,20 @@
 .player-tile {
-  background-color: #f9f9f9;
+  padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  width: 120px;
-  text-align: center;
-  font-size: 0.9rem;
+  border-radius: 5px;
   cursor: pointer;
-  position: relative;
-  transition: transform 0.2s, background-color 0.2s;
+  transition: transform 0.2s, background-color 0.2s, border 0.2s;
 }
 
 .player-tile:hover {
-  background-color: #eef;
-  transform: translateY(-3px);
+  background-color: #f0f0f0;
 }
 
 .player-tile.active {
-  background-color: #cce5ff;
-  border-color: #007bff;
+  background-color: #007bff; /* Blue background for selected */
+  color: white;
+  border: 3px solid #0056b3; /* Thicker blue border */
+  transform: scale(1.05); /* Slightly enlarge */
 }
 
 .player-info {

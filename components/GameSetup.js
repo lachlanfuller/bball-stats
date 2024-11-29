@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faEdit, faTrash, faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+
 import "./GameSetup.css";
 
 const GameSetup = ({ players, setPlayers, setScreen, gameSetup, setGameSetup }) => {
@@ -12,6 +13,13 @@ const GameSetup = ({ players, setPlayers, setScreen, gameSetup, setGameSetup }) 
     if (newPlayer.trim() !== "") {
       setPlayers([...players, { name: newPlayer, isStarter: players.length < 5 }]);
       setNewPlayer("");
+    }
+  };
+
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault(); // Prevent default form behavior
+      addPlayer(); // Add player
     }
   };
 
@@ -48,7 +56,13 @@ const GameSetup = ({ players, setPlayers, setScreen, gameSetup, setGameSetup }) 
 
       {/* Player Input */}
       <div className="add-player">
-        <input type="text" placeholder="Enter Player Name" value={newPlayer} onChange={(e) => setNewPlayer(e.target.value)} />
+        <input
+          type="text"
+          placeholder="Enter Player Name"
+          value={newPlayer}
+          onChange={(e) => setNewPlayer(e.target.value)}
+          onKeyDown={handleKeyPress} // Allow adding player on Enter key
+        />
         <button onClick={addPlayer}>Add Player</button>
       </div>
 

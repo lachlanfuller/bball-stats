@@ -9,7 +9,7 @@ const ClockManager = ({ gameClock, isClockRunning, toggleClock, currentPeriod, e
   };
 
   return (
-    <div className="clock-container">
+    <div className="clock-manager">
       <h3>Time: {formatTime(gameClock)}</h3>
       <h3>Period: {currentPeriod}</h3>
       <button onClick={toggleClock}>{isClockRunning ? "Pause Clock" : "Start Clock"}</button>

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+
 .clock-container {
   display: flex;
   flex-direction: column;
@@ -49,4 +51,92 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.export-csv-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.export-csv-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.nunito-main {
+  font-family: "Nunito", sans-serif;
+}
+
+.game-controls {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.stats-log ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.stats-log li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.log-text {
+  flex: 1;
+}
+
+.log-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.export-csv-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.export-csv-btn:hover {
+  background-color: #0056b3;
+}
+
+.export-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.export-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.export-btn:hover {
+  background-color: #0056b3;
 }
